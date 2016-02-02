@@ -12,8 +12,8 @@ author:
   affiliation: aff1
   corref: aff1
 - initials: MVdOC
-  surname: di Oleggio Castello
-  firstname: Matteo Visconti
+  surname: Visconti di Oleggio Castello
+  firstname: Matteo
   email: matteo.visconti.gr@dartmouth.edu
   affiliation: aff1
 
