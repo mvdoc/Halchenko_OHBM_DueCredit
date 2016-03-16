@@ -131,7 +131,19 @@ Journal of Machine Learning Research, 12...
 ```
 
 The references can then be easily converted into BibTeX format by using
-the `duecredit summary --format bibtex` command.
+`duecredit summary --format bibtex` in the command line.
+
+```
+$duecredit summary --format bibtex
+@Misc{JOP+01,
+author = {Eric Jones and Travis Oliphant ...}
+title = {{SciPy}: Open source scientific ...}
+year = {2001--},
+url = "http://www.scipy.org/",
+note = {[Online; accessed 2015-07-13]}
+}
+...
+```
 
 
 #Results
