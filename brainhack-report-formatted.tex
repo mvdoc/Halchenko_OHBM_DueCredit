@@ -219,10 +219,81 @@ used.
 
 \section{Approach}\label{approach}
 
-DueCredit is currently available for Python, we envision extending
+DueCredit is currently available for Python, but we envision extending
 support to other frameworks (e.g., Matlab, R). Until DueCredit gets
 adopted natively by the projects, it provides the functionality to
 ``inject'' references for 3rd party modules.
+
+For the developer, DueCredit implements a decorator \texttt{@due.dcite}
+that allows to link a method or class to a set of references that can be
+specified through a doi or BibTeX entry. For example (from PyMVPA):
+
+\begin{verbatim}
+@due.dcite(
+    Doi('10.1016/j.neuron.2011.08.026'),
+    description="Hyperalignment of data to a ...",
+    tags=["implementation"])
+def train(self, datasets):
+    """Derive a common feature space ...
+    ....
+\end{verbatim}
+
+The end-user simply needs to run the script loading the
+\texttt{duecredit} module. For example, with the following minimal
+script
+
+\begin{verbatim}
+# A tiny analysis script to demonstrate duecredit
+#
+# Import of duecredit is not necessary if you just run
+# this script with
+#    python -m duecredit
+# import duecredit  # Just to enable duecredit
+from scipy.cluster.hierarchy import linkage
+from scipy.spatial.distance import pdist
+from sklearn.datasets import make_blobs
+
+print("I: Simulating 4 blobs")
+data, true_label = make_blobs(centers=4)
+
+dist = pdist(data, metric='euclidean')
+
+Z = linkage(dist, method='single')
+print("I: Done clustering 4 blobs")
+\end{verbatim}
+
+by running it with \texttt{python\ -m\ duecredit}, we get a summary of
+the packages and methods used
+
+\begin{verbatim}
+$python -m duecredit example_scipy.py
+I: Simulating 4 blobs
+I: Done clustering 4 blobs
+DueCredit Report:
+- Scientific tools library / numpy (v 1.10.4) [1]
+- Scientific tools library / scipy (v 0.17) [2]
+  - Single linkage hierarchical clustering ... [3]
+- Machine Learning library / sklearn (v 0.17) [4]
+
+3 packages cited
+0 modules cited
+1 functions cited
+
+References
+----------
+
+[1] Van Der Walt, S., Colbert, S.C. & ...
+structure for efficient numerical comp...
+Engineering, 13(2), pp.22–30.
+[2] Jones, E. et al., 2001. SciPy: Open ...
+[3] Sibson, R., 1973. SLINK: an optimall...
+single-link cluster method. The Computer...
+[4] Pedregosa, F. et al., 2011. Scikit-l...
+Journal of Machine Learning Research, 12...
+\end{verbatim}
+
+The references can then be easily converted into BibTeX format by using
+the \texttt{duecredit\ summary\ -\/-format\ bibtex} command.
 
 \section{Results}\label{results}
 

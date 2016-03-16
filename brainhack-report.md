@@ -32,12 +32,10 @@ url: https://github.com/duecredit/duecredit
 
 coi: None
 
-acknow: The authors would like to thank the organizers and attendees of the
-2015 OHBM Hackathon. This project is supported in part by a grant from the NSF
-(award 1429999).
+acknow: The authors would like to thank the organizers and attendees of the 2015 OHBM Hackathon. This project is supported in part by a grant from the NSF (award 1429999).
 
 contrib: YOH and MVdOC performed the project and wrote the report.
-  
+
 bibliography: brainhack-report
 
 gigascience-ref: REFXXX
@@ -72,11 +70,10 @@ doi or BibTeX entry. For example (from PyMVPA):
 ```
 @due.dcite(
     Doi('10.1016/j.neuron.2011.08.026'),
-    description="Hyperalignment of data to a common space",
+    description="Hyperalignment of data to a ...",
     tags=["implementation"])
 def train(self, datasets):
-    """Derive a common feature space from a series of datasets.
-    """
+    """Derive a common feature space ...
     ....
 ```
 
@@ -86,8 +83,9 @@ module. For example, with the following minimal script
 ```
 # A tiny analysis script to demonstrate duecredit
 #
-# Import of duecredit is not necessary if you just run this script with
-# python -m duecredit
+# Import of duecredit is not necessary if you just run
+# this script with
+#    python -m duecredit
 # import duecredit  # Just to enable duecredit
 from scipy.cluster.hierarchy import linkage
 from scipy.spatial.distance import pdist
@@ -112,7 +110,7 @@ I: Done clustering 4 blobs
 DueCredit Report:
 - Scientific tools library / numpy (v 1.10.4) [1]
 - Scientific tools library / scipy (v 0.17) [2]
-  - Single linkage hierarchical clustering / scipy.cluster.hierarchy:linkage (v 0.17) [3]
+  - Single linkage hierarchical clustering ... [3]
 - Machine Learning library / sklearn (v 0.17) [4]
 
 3 packages cited
@@ -122,14 +120,14 @@ DueCredit Report:
 References
 ----------
 
-[1] Van Der Walt, S., Colbert, S.C. & Varoquaux, G., 2011. The NumPy array: a
-structure for efficient numerical computation. Computing in Science &
+[1] Van Der Walt, S., Colbert, S.C. & ...
+structure for efficient numerical comp...
 Engineering, 13(2), pp.22–30.
-[2] Jones, E. et al., 2001. SciPy: Open source scientific tools for Python.
-[3] Sibson, R., 1973. SLINK: an optimally efficient algorithm for the
-single-link cluster method. The Computer Journal, 16(1), pp.30–34.
-[4] Pedregosa, F. et al., 2011. Scikit-learn: Machine learning in Python. The
-Journal of Machine Learning Research, 12, pp.2825–2830.
+[2] Jones, E. et al., 2001. SciPy: Open ...
+[3] Sibson, R., 1973. SLINK: an optimall...
+single-link cluster method. The Computer...
+[4] Pedregosa, F. et al., 2011. Scikit-l...
+Journal of Machine Learning Research, 12...
 ```
 
 The references can then be easily converted into BibTeX format by using
