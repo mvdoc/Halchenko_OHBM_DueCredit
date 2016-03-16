@@ -111,7 +111,7 @@ DueCredit Report:
 - Scientific tools library / numpy (v 1.10.4) [1]
 - Scientific tools library / scipy (v 0.17) [2]
   - Single linkage hierarchical clustering ... [3]
-- Machine Learning library / sklearn (v 0.17) [4]
+- Machine Learning library / sklearn ... [4]
 
 3 packages cited
 0 modules cited
