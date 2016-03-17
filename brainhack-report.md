@@ -32,7 +32,7 @@ url: https://github.com/duecredit/duecredit
 
 coi: None
 
-acknow: The authors would like to thank the organizers and attendees of the 2015 OHBM Hackathon. This project is supported in part by a grant from the NSF (award 1429999).
+acknow: The authors would like to thank the organizers and attendees of the 2015 OHBM Hackathon. This project is supported in part by a grant from the NSF (award 1429999). MVdOC was supported by a Dartmouth Graduate Studies Travel Grant.
 
 contrib: YOH and MVdOC performed the project and wrote the report.
 
